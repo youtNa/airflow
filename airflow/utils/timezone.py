@@ -86,13 +86,14 @@ def convert_to_utc(value):
     :param value: datetime
     :return: datetime with tzinfo
     """
-    if not value:
-        return value
-
-    if not is_localized(value):
-        value = pendulum.instance(value, TIMEZONE)
-
-    return value.astimezone(utc)
+    # if not value:
+    #     return value
+    #
+    # if not is_localized(value):
+    #     value = pendulum.instance(value, TIMEZONE)
+    #
+    # return value.astimezone(utc)
+    return value
 
 
 def make_aware(value, timezone=None):
